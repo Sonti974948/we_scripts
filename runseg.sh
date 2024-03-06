@@ -13,10 +13,10 @@ cp $WEST_SIM_ROOT/CONFIG/closed.prmtop .
 cp $WEST_SIM_ROOT/analysis.cpptraj .
 
 if [ "$WEST_CURRENT_SEG_INITPOINT_TYPE" = "SEG_INITPOINT_CONTINUES" ]; then
-  sed "s/RAND/$WEST_RAND16/g" $WEST_SIM_ROOT/CONFIG/prod.in > prod.in
+  sed "s/RAND/$WEST_RAND16/g" $WEST_SIM_ROOT/CONFIG/run.in > prod.in
   cp $WEST_PARENT_DATA_REF/seg.rst ./parent.rst
 elif [ "$WEST_CURRENT_SEG_INITPOINT_TYPE" = "SEG_INITPOINT_NEWTRAJ" ]; then
-  sed "s/RAND/$WEST_RAND16/g" $WEST_SIM_ROOT/CONFIG/prod_init.in > prod.in
+  sed "s/RAND/$WEST_RAND16/g" $WEST_SIM_ROOT/CONFIG/run.in > prod.in
   cp $WEST_PARENT_DATA_REF ./parent.rst
 fi
 
