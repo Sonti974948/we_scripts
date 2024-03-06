@@ -27,11 +27,12 @@ echo "RUNSEG.SH: CUDA_VISIBLE_DEVICES_ALLOCATED = " $CUDA_VISIBLE_DEVICES_ALLOCA
 echo "RUNSEG.SH: WM_PROCESS_INDEX = " $WM_PROCESS_INDEX
 echo "RUNSEG.SH: CUDA_VISIBLE_DEVICES = " $CUDA_VISIBLE_DEVICES
 
-home/sontisid/Programs/GPUMD/src/gpumd > forty_ps_test_nvt_gpumd_runs.out
+/home/sontisid/Programs/GPUMD/src/gpumd > forty_ps_test_nvt_gpumd_runs.out
 
 $CPPTRAJ -i analysis.cpptraj
 
 # #cat rbd_rmsdA.dat | tail -n +2 | awk '{print $2}' > $WEST_PCOORD_RETURN
+#Try to add a line which takes the first and last value of CV to PCOORD_RETURN
 # paste <(cat rbd_comA.dat | tail -n +2 | awk {'print $2'}) <(cat rbd_rmsdA.dat | tail -n +2 | awk {'print $2'})>$WEST_PCOORD_RETURN
 
 # cat rbd_rmsdB.dat | tail -n +2 | awk {'print $2'} > $WEST_RBD_RMSDB_RETURN
