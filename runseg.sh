@@ -27,7 +27,7 @@ echo "RUNSEG.SH: CUDA_VISIBLE_DEVICES_ALLOCATED = " $CUDA_VISIBLE_DEVICES_ALLOCA
 echo "RUNSEG.SH: WM_PROCESS_INDEX = " $WM_PROCESS_INDEX
 echo "RUNSEG.SH: CUDA_VISIBLE_DEVICES = " $CUDA_VISIBLE_DEVICES
 
-$PMEMD -O home/sontisid/Programs/GPUMD/src/gpumd > forty_ps_test_nvt_gpumd_runs.out
+home/sontisid/Programs/GPUMD/src/gpumd > forty_ps_test_nvt_gpumd_runs.out
 
 $CPPTRAJ -i analysis.cpptraj
 
